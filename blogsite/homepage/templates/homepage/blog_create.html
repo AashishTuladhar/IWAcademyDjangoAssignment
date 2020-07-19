@@ -1,0 +1,19 @@
+{% extends 'homepage/layout.html' %}
+{% load static %}
+
+{% block partial-container %} 
+
+<div class="box">
+    <div class="box-header">
+        Blog Detail
+    </div>
+    <div class="box-body">
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</div>   
+
+{% endblock %}

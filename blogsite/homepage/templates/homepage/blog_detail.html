@@ -1,0 +1,36 @@
+{% extends 'homepage/layout.html' %}
+{% load static %}
+
+{% block partial-container %} 
+
+<div class="box">
+    <div class="box-header">
+        Blog Form
+    </div>
+    <div class="box-body">
+        <table class="table-bordered">
+            <tr>
+                <td>Title: </td>
+                <td>{{ data.blog_title }}</td>
+            </tr>
+            <tr>
+                <td>Created At: </td>
+                <td>{{ data.created_at }}</td>
+            </tr>
+            <tr>
+                <td>Last update: </td>
+                <td>{{ data.updated_at }}</td>
+            </tr>
+            <tr>
+                <td>Author: </td>
+                <td>{{ data.author.author_name }}</td>
+            </tr>
+            <tr>
+                <td>Content: </td>
+                <td>{{ data.blog_content }}</td>
+            </tr>
+        </table>
+    </div>
+</div>
+    
+{% endblock %}

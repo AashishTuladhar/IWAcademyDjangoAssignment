@@ -1,0 +1,41 @@
+{% extends 'homepage/layout.html' %}
+{% load static %}
+
+{% block partial-container %} 
+
+<div class="box">
+    <div class="box-header">
+        Blogs
+        <div class="pull-right">
+            <input type="button" class="button text-black btn-add-blog" value="Create new" onclick="blog_add()" />
+        </div>
+    </div>
+    <div class="box-body">
+        <table class="table-bordered">
+            <tr>
+                <th>Blog Title</th>
+                <th>Blog Contents</th>
+                <th>Author Name</th>
+                <th class="text-center">Created At</th>
+                <th class="text-center">Last Modified</th>
+                <th class="text-center">Action</th>
+            </tr>
+            {% for u in data %}
+            <tr>
+                <td>{{ u.blog_title }}</td>
+                <td>{{ u.blog_content }}</td>
+                <td>{{ u.author }}</td>
+                <td class="text-center">{{ u.created_at }}</td>
+                <td class="text-center">{{ u.updated_at }}</td>
+                <td class="text-center">
+                    <a href="/blogs/{{ u.id }}">Details</a> |
+                    <a href="/blog/edit/{{ u.id }}">Edit</a> |
+                    <a href="/blog/delete/{{ u.id }}">Delete</a> 
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+</div>
+    
+{% endblock %}

@@ -1,0 +1,39 @@
+{% load static %}
+
+<html>
+    <head>
+        <title>{{ title }}</title>
+
+        <link rel="stylesheet" type="text/css" href="{% static 'css/layout.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/util.css' %}">
+
+    </head>
+    <body>
+        <div id="navbar">
+            <div class="content">
+              <div class="logo">
+                <img src="{% static 'images/logo/main-logo.png' %}">
+              </div>
+              <div class="menu">
+                <a class="button" href="/blogs"> 
+                  Blogs
+                </a>
+                <a class="button borderless" href="/authors">
+                  Authors
+                </a>
+              </div>
+            </div>
+        </div>
+
+        <section id="main">
+          <div class="section-container">
+            {% block partial-container %} 
+            {% endblock %}
+          </div>
+        </section>
+
+        
+    </body>
+
+    <script src="{% static 'js/layout.js' %}"></script>
+</html>

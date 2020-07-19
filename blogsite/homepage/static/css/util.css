@@ -1,0 +1,92 @@
+.button {
+    border-radius: 20px;
+    border: 1.5px solid white;
+    padding: 10px;
+    background: transparent;
+    cursor: pointer;
+}
+
+.button.text-white:not(.borderless) {
+    border: 1.5px solid white !important;
+}
+
+.button.text-black:not(.borderless) {
+    border: 1.5px solid black !important;
+}
+
+.button.circle {
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    border-radius: 50%;
+    border: 1px solid #a6a8aa;
+}
+
+.borderless {
+    border: 0 !important;
+}
+
+.text-white {
+    color: white !important;
+}
+
+.text-black {
+    color: black !important;
+}
+
+.box {
+    position: relative;
+    border-radius: 3px;
+    background: #ffffff;
+    border-top: 3px solid #d2d6de;
+    margin-bottom: 20px;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+}
+
+.box .box-header {
+    color: #444;
+    display: block;
+    padding: 10px;
+    position: relative;
+    font-size: 1.3rem;
+    border-bottom: 1px solid #f4f4f4;
+}
+
+.box .box-body {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+    padding: 10px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    padding: 8px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.table-bordered {
+    border: 1px solid #ddd;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.pull-right {
+    float: right;
+}

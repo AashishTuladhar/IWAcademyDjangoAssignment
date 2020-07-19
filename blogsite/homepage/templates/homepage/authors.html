@@ -1,0 +1,32 @@
+{% extends 'homepage/layout.html' %}
+{% load static %}
+
+{% block partial-container %} 
+
+<div class="box">
+    <div class="box-header">
+        Authors
+        <div class="pull-right">
+            <input type="button" class="button text-black" value="Add" onclick="author_add()" />
+        </div>
+    </div>
+    <div class="box-body">
+        <table class="table-bordered">
+            <tr>
+                <th>Author Name</th>
+                <th class="text-center">Action</th>
+            </tr>
+            {% for u in data %}
+            <tr>
+                <td>{{ u.author_name }}</td>
+                <td class="text-center">
+                    <a href="/author/edit/{{ u.id }}">Edit</a> |
+                    <a href="/author/delete/{{ u.id }}">Delete</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+</div>
+    
+{% endblock %}
